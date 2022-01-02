@@ -3,8 +3,11 @@
     <router-link class="nav-link flex" :to="{ name: 'Home' }">
       <img src="@/assets/icon-arrow-left.svg" alt="" />Go Back
     </router-link>
+
     <!-- Header -->
     <div class="header flex">
+      <!-- Loading Animation -->
+      <Loading v-show="loading"/>
       <div class="left flex">
         <span>Status</span>
         <div
@@ -107,13 +110,18 @@
 
 <script>
 import { mapActions, mapMutations, mapState } from "vuex";
+import Loading from '../components/Loading';
 
 export default {
   name: "invoiceView",
   data() {
     return {
       currentInvoice: null,
+      loading: null,
     };
+  },
+  components: {
+    Loading,
   },
   created() {
     this.getCurrentInvoice();
@@ -133,8 +141,10 @@ export default {
     },
 
     async deleteInvoice(docId) {
+      this.loading = true;
       await this.DELETE_INVOICE(docId);
       this.$router.push({ name: "Home" });
+      this.loading = false;
     },
 
    updateStatusToPaid(docId) {
