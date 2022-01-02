@@ -71,6 +71,14 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  &::-webkit-scrollbar {
+    background-color: #252945;
+  };
+  &::-webkit-scrollbar-thumb {
+    background: #141625;
+    border-radius: 50px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);    
+  }
 }
 
 .app {
