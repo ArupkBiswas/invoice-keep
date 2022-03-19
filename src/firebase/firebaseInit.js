@@ -1,18 +1,20 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
+//import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCwccIlwbkfilxT9bNcjXCRrey78S67khQ",
-    authDomain: "invoice-project-vue.firebaseapp.com",
-    projectId: "invoice-project-vue",
-    storageBucket: "invoice-project-vue.appspot.com",
-    messagingSenderId: "939261201676",
-    appId: "1:939261201676:web:a2096d5122fc78f6e10d29"
+    apiKey: "AIzaSyD1466aUHrkbShiSjXwf0M_BAlOYu3dFV4",
+    authDomain: "invoice-keep.firebaseapp.com",
+    projectId: "invoice-keep",
+    storageBucket: "invoice-keep.appspot.com",
+    messagingSenderId: "233523232179",
+    appId: "1:233523232179:web:e5645eca468fd20f961fc6"
   };
 
   // Initialize Firebase
   const firebaseApp = firebase.initializeApp(firebaseConfig);
+  //const app = initializeApp(firebaseConfig);
 
 
 export default firebaseApp.firestore();

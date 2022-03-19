@@ -11,6 +11,7 @@
       </div>
     </div>
     <div v-else class="mobile-message flex flex-column">
+      <img src="@/assets/sad_mobile.svg" />
       <h2>Sorry, this app is not supported on Mobile devices</h2>
       <p>To use this app, please use a computer or tablet</p>
     </div>
