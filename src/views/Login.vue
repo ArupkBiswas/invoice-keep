@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  name: "login",
+  name: "Login",
 
   methods: {
     newUser() {
@@ -56,6 +56,9 @@ export default {
     },
     backToLanding() {
       this.$router.push({ name: "Landing" });
+    },
+    login() {
+      this.$router.push({ name: "Home" });
     },
   },
 };
