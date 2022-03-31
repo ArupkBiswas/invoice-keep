@@ -1,6 +1,13 @@
 <template>
-  <div class="Landing flex flex-column container">
-    <h2>Landing Page</h2>
+  <div class="Landing flex flex-column container">  
+    <div class="save flex">
+      <div class="left">
+       <h2>Landing Page</h2>
+      </div>
+      <div class="right flex">
+        <button type="button" @click="login" class="purple">Login</button>
+      </div>  
+    </div>
     <img src="@/assets/market-research-colored.svg">
   </div>
 </template>
@@ -8,6 +15,12 @@
 <script>
   export default {
     name: "Landing",
+
+    methods: {
+      login() {
+        this.$router.push({ name: "Login" });
+      }
+    }
   };
 </script>
 
@@ -29,5 +42,16 @@
     @media (min-width: 900px) {
       padding-top: 72px;
     }
+
+    .save {
+      div {
+        flex: 1;
+      }
+
+      .right {
+        justify-content: flex-end;
+      }
+    }
+
   }
 </style>

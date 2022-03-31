@@ -1,4 +1,7 @@
 <template>
+  <div class="flex Logout">
+    <button type="button" @click="logout" class="red logout">Logout</button>
+  </div>
   <div class="home container">
     <!-- Header -->
     <div class="header flex">
@@ -69,6 +72,11 @@ export default {
       }
       this.filteredInvoice = e.target.innerText;
     },
+
+    logout() {
+      this.$router.push({ name: "Landing" });
+    }
+
   },
   computed: {
     ...mapState(['invoiceData']),
@@ -92,6 +100,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.Logout {
+  align-self: flex-end;
+  margin-right: 30px;
+  .logout{
+    padding: 8px 10px;
+    margin-top: 20px;
+    width: 100px;
+  }
+}
+
 .home {
   color: #fff;
   
